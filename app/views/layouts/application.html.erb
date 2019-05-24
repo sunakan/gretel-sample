@@ -9,6 +9,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= yield :original_header %>
+    <%= breadcrumbs pretext: "パンくずリストの例", separator: " &rsaquo; " %>
+    <div class="bg-pink">
+      <%= yield %>
+    </div>
+    <%= breadcrumbs pretext: "ぱんくずりすと", separator: " &rsaquo; " %>
+    <%= yield :original_footer %>
   </body>
 </html>
