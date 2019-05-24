@@ -1,3 +1,18 @@
-<h1>Myapp#hoge</h1>
+<% content_for :original_header do %>
+  <div class="bg-lightgreen">
+    <h2>オリジナルHOGEへっだ</h2>
+  </div>
+<% end %>
+
+<% content_for :original_footer do %>
+  <div class="bg-lightblue">
+    <h2>オリジナルfugaふった</h2>
+  </div>
+<% end %>
+
+<h3>Myapp#hoge</h3>
+<% breadcrumb :hoge %>
 <p>2ページ目</p>
-<%= link_to hoge_fuga_path, hoge_fuga_path %>
+<h1>
+  <%= link_to hoge_fuga_path, hoge_fuga_path %>
+</h1>

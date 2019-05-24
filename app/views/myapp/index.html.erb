@@ -1,3 +1,18 @@
-<h1>Myapp#index</h1>
+<% content_for :original_header do %>
+  <div class="bg-lightgreen">
+    <h2>オリジナルヘッダーべた書き版ABC</h2>
+  </div>
+<% end %>
+
+<% content_for :original_footer do %>
+  <div class="bg-lightblue">
+    <h2>オリジナルフッターべた書き版ABC</h2>
+  </div>
+<% end %>
+
+<h3>Myapp#index</h3>
+<% breadcrumb :myapp %>
 <p>1ページ目</p>
-<%= link_to hoge_path, hoge_path %>
+<h1>
+  <%= link_to hoge_path, hoge_path %>
+</h1>

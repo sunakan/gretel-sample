@@ -1,25 +1,21 @@
-crumb :root do
-  link "Home", root_path
+#crumb :root do
+#  link "トップへ", "/"
+#end
+
+crumb :myapp do
+  link "myapp", "/myapp"
+  #parent :root
 end
 
-# crumb :projects do
-#   link "Projects", projects_path
-# end
+crumb :hoge do
+  link "hoge", hoge_path
+  parent :myapp
+end
 
-# crumb :project do |project|
-#   link project.name, project_path(project)
-#   parent :projects
-# end
-
-# crumb :project_issues do |project|
-#   link "Issues", project_issues_path(project)
-#   parent :project, project
-# end
-
-# crumb :issue do |issue|
-#   link issue.title, issue_path(issue)
-#   parent :project_issues, issue.project
-# end
+crumb :fuga do
+  link "fuga", hoge_fuga_path
+  parent :hoge
+end
 
 # If you want to split your breadcrumbs configuration over multiple files, you
 # can create a folder named `config/breadcrumbs` and put your configuration
