@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  #root "myapp#index"
+  scope "/myapp", controller: :myapp do
+    get "/",          action: :index
+    get "/hoge",      action: :hoge
+    get "/hoge/fuga", action: :fuga
+  end
 end
